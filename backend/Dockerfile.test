@@ -1,0 +1,4 @@
+FROM mcr.microsoft.com/dotnet/sdk:8.0
+WORKDIR /src
+COPY . .
+ENTRYPOINT ["dotnet", "test", "Admission.Tests/Admission.Tests.csproj", "-c", "Release", "--logger", "console;verbosity=normal"]
