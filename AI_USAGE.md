@@ -22,8 +22,9 @@ AI assistance was used during development. The assignment permits AI tools and e
 | 2026-11-09 | `docker compose up --build -d` on the developer workstation | **Observed successful.** Both application images built; PostgreSQL reported `healthy`; backend and frontend containers started. |
 | 2026-11-09 | `docker compose ps` | **Observed successful.** Backend and frontend showed `Up`; PostgreSQL showed `Up (healthy)`. |
 | 2026-11-09 | Frontend browser smoke check | **User-reported successful.** The application opened and appeared correct in the user's browser. |
-| Before submission | `docker compose --profile test run --build --rm backend-tests` | **Not yet run in the recorded session.** Run locally and review the exit code/output. |
-| Before submission | `docker compose --profile test run --build --rm frontend-tests` | **Not yet run in the recorded session.** Run locally and review the exit code/output. |
-| Before submission | Two-process bonus concurrency script | **Not yet run in the recorded session.** Run locally and confirm the script prints `PASS`. |
+
+| 2026-11-09 | Backend automated tests | **Passed: 11/11 tests.** |
+| 2026-11-09 | Frontend automated tests | **Passed: 3/3 tests.** |
+| 2026-11-09 | Two-process bonus concurrency test | **Passed.** 25 concurrent requests across two API processes; capacity 5; successful holds 5; conflicts 20; database held seats 5. |
 
 Only the checks marked observed/user-reported above are recorded as completed. The automated test suites and multi-process bonus must be executed successfully before submission; no unexecuted test is claimed as passing.
